@@ -14,8 +14,8 @@ io.on('connection', function(socket){
     io.emit('user typing', username);
   });
 
-  socket.on('chat message', function(msg, username){
-    // const messageToSend = username + ': ' + msg;
+  socket.on('chat message', function(msg){
+
     io.emit('chat message', msg);
   });
 
